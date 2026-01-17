@@ -1,0 +1,31 @@
+﻿<Window x:Class="SysAdminCenter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SysAdminCenter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="_Connectionsettings">
+                <MenuItem Header="_Neue Domaincontrollerverbindung hinzufügen" Command="{Binding NewCommand}" />
+                <MenuItem Header="_Öffne Domaincontrollerverbidnung..." Command="{Binding OpenCommand}" />
+                <!--<Separator />
+                <MenuItem Header="_Speichern" Command="{Binding SpeichernCommand}" />
+                <MenuItem Header="Speichern _unter..." Command="{Binding SpeichernUnterCommand}" />
+                <Separator />
+                <MenuItem Header="_Beenden" Command="{Binding BeendenCommand}" />-->
+            </MenuItem>
+
+            <!--<MenuItem Header="_Bearbeiten">
+                <MenuItem Header="_Rückgängig" Command="{Binding UndoCommand}" />
+                <MenuItem Header="_Wiederholen" Command="{Binding RedoCommand}" />
+            </MenuItem>
+
+            <MenuItem Header="_Hilfe">
+                <MenuItem Header="_Info" Command="{Binding InfoCommand}" />
+            </MenuItem>-->
+        </Menu>
+    </Grid>
+</Window>
