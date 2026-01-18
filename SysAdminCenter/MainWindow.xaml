@@ -9,8 +9,8 @@
     <Grid>
         <Menu VerticalAlignment="Top">
             <MenuItem Header="_Connectionsettings">
-                <MenuItem Header="_Neue Domaincontrollerverbindung hinzufügen" Command="{Binding NewCommand}" />
-                <MenuItem Header="_Öffne Domaincontrollerverbidnung..." Command="{Binding OpenCommand}" />
+                <MenuItem Header="_Neue Domaincontrollerverbindung hinzufügen" Command="{Binding NewConnectionCommand}" />
+                <MenuItem Header="_Öffne Domaincontrollerverbidnung..." Command="{Binding OpenConnectionCommand}" />
                 <!--<Separator />
                 <MenuItem Header="_Speichern" Command="{Binding SpeichernCommand}" />
                 <MenuItem Header="Speichern _unter..." Command="{Binding SpeichernUnterCommand}" />

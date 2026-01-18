@@ -10,8 +10,13 @@ namespace SysAdminCenter;
 
 public class MainWindowViewModel
 {
+
+    private WindowManager _windowmanager;
+
     public MainWindowViewModel()
     {
+        _windowmanager = new WindowManager();
+
         OpenConnectionCommand = new RelayCommand(OnOpenConnectionCommand);
         NewConnectionCommand = new RelayCommand(OnNewConnectionCommand);
     }
@@ -20,6 +25,7 @@ public class MainWindowViewModel
     {
         // Beispiel: Öffne ein Dialog zur Eingabe neuer Verbindungsdaten.
         // Implementiere UI-Logik hier.
+        _windowmanager.ShowWindow(new AddConnectionViewModel());
     }
 
     private async void OnOpenConnectionCommand()
@@ -47,8 +53,8 @@ public class MainWindowViewModel
         }
     }
 
-    public IRelayCommand OpenConnectionCommand;
-    public IRelayCommand NewConnectionCommand;
+    public IRelayCommand OpenConnectionCommand { get; }
+    public IRelayCommand NewConnectionCommand { get; }
 
     private Task<List<Dictionary<string, string>>> ConnectAndSearchAsync(
         string host,

@@ -26,6 +26,7 @@ public static class AppHost
         //services.AddTransient<PersonViewModel>();
 
         // Optional: einfache Factory, die eine neue KategorieViewModel-Instanz aus dem Container liefert
+        services.AddTransient<Func<AddConnectionViewModel>>(provider => () => provider.GetRequiredService<AddConnectionViewModel>());
         //services.AddTransient<Func<KategorieViewModel>>(provider => () => provider.GetRequiredService<KategorieViewModel>());
         //services.AddTransient<Func<PersonViewModel>>(provider => () => provider.GetRequiredService<PersonViewModel>());
         //services.AddTransient<Func<MainViewModel>>(provider => () => provider.GetRequiredService<MainViewModel>());
